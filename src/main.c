@@ -15,10 +15,11 @@ int main(){
         BeginDrawing();
         ClearBackground(SKYBLUE);
         BeginMode3D(cam);
-        //DisableCursor();
+        DisableCursor();
         draw_terrain();
         EndMode3D();
         DrawFPS(10, 10);
+        DrawText("+", (GetScreenWidth() - MeasureText("+", 30)) / 2, GetScreenHeight() / 2, 30, BLACK);
         EndDrawing();
     }
 }
