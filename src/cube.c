@@ -6,6 +6,9 @@ extern Camera3D cam;
 
 
 void draw_cube(Vector3 pos, float size, Color color){
+    if(Vector3Distance(cam.position, pos) >= 90){
+        return;
+    }
     float half = size / 2.0f;
     
     rlPushMatrix();
@@ -80,6 +83,9 @@ void draw_cube(Vector3 pos, float size, Color color){
 
 
 void draw_cube_lines(Vector3 pos, float size, Color color){
+    if(Vector3Distance(cam.position, pos) >= 90){
+        return;
+    }
     float half = size / 2.0f;
     
     rlPushMatrix();
