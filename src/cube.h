@@ -13,4 +13,12 @@
 
 void draw_cube(Vector3 pos, float size, Color color);
 void draw_cube_lines(Vector3 pos, float size, Color color);
+
+
+typedef struct {
+    Vector3 position;
+    float size;
+    Color color;
+} Cube;
+
 #endif

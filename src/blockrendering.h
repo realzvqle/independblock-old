@@ -5,6 +5,8 @@
 #include "main.h"
 
 
-void draw_terrain();
+#define MAX_CUBES 3000
+
+void draw_blocks();
 
 #endif

@@ -1,4 +1,7 @@
-#include "terrain.h"
+#include "blockrendering.h"
+#include "movement.h"
+
+
 
 Camera3D cam;
 Texture2D tex;
@@ -11,15 +14,15 @@ int main(){
 
     tex = LoadTexture("grass.png");
     while(!WindowShouldClose()){
-        UpdateCamera(&cam, CAMERA_FIRST_PERSON);
         BeginDrawing();
+        update_movement();
         ClearBackground(SKYBLUE);
         BeginMode3D(cam);
         DisableCursor();
-        draw_terrain();
+        draw_blocks();
         EndMode3D();
         DrawFPS(10, 10);
-        DrawText("+", (GetScreenWidth() - MeasureText("+", 30)) / 2, GetScreenHeight() / 2, 30, BLACK);
+        DrawText("+", (GetScreenWidth() - MeasureText("+", 40)) / 2, GetScreenHeight() / 2, 40, BLACK);
         EndDrawing();
     }
 }
